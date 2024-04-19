@@ -1,0 +1,13 @@
+{
+  "name": "react-biome-sample",
+  "build":{
+    "context": "..",
+    "dockerfile": "../Dockerfile"
+  },
+  "runArgs": ["--name", "react-biome-sample"],
+  "workspaceMount": "source=${localWorkspaceFolder}/,target:/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=react-biome-sample-node_modules,target=/workspace/node_modules,type=volume"
+  ]
+}
