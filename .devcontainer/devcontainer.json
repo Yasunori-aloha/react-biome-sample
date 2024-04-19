@@ -9,5 +9,20 @@
   "workspaceFolder": "/workspace",
   "mounts": [
     "source=react-biome-sample-node_modules,target=/workspace/node_modules,type=volume"
-  ]
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "biomejs.biome"
+      ],
+      "settings": {
+        "editor.codeActionsOnSave": {
+          // コード保存時に、Biomeによる修正を有効化
+          "quickfix.biome": "explicit"
+        },
+        "editor.defaultFormatter": "biomejs.biome",
+        "editor.formatOnSave": true
+      }
+    }
+  }
 }
